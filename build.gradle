@@ -1,0 +1,36 @@
+buildscript {
+	apply from: file('gradle/buildscript.gradle'), to: buildscript
+}
+
+apply plugin: 'org.anarres.stdproject'
+stdproject {
+}
+
+group = "org.anarres.mirrors.heronarts"
+
+apply plugin: 'org.anarres.stdmodule'
+stdmodule {
+	description "Processing 3 integration for LX lighting library."
+	author id: 'mark', name: 'Mark L. Slee', email: 'mark@heronarts.com'
+	author id: 'shevek', name: 'Shevek', email: 'github@anarres.org'
+	license 'Apache-2.0'
+}
+
+repositories {
+	mavenLocal()
+}
+
+dependencies {
+	compile 'org.anarres.mirrors.heronarts:lx:1.0.0-SNAPSHOT'
+	compile 'org.processing:core:3.0.1'
+	compile 'org.anarres.mirrors.processing:video:3.0.1-P1-SNAPSHOT'
+	compile 'org.jogamp.jogl:jogl-main:2.3.2'
+}
+
+sourceCompatibility = 1.7
+animalsniffer {
+	signature = "org.codehaus.mojo.signature:java17:+@signature"
+	skip = true
+}
+
+sourceSets.main.java.srcDirs = [ 'src' ];

@@ -8,3 +8,6 @@ application.macosx
 /bin
 /distribution
 
+/.nb-gradle/
+/.gradle/
+/build/
