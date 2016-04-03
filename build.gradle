@@ -11,7 +11,7 @@ group = "org.anarres.mirrors.heronarts"
 apply plugin: 'org.anarres.stdmodule'
 stdmodule {
 	description "Processing 3 integration for LX lighting library."
-	author id: 'mark', name: 'Mark L. Slee', email: 'mark@heronarts.com'
+	author id: 'heronarts', name: 'Mark L. Slee', email: 'mark@heronarts.com'
 	author id: 'shevek', name: 'Shevek', email: 'github@anarres.org'
 	license 'Apache-2.0'
 }
